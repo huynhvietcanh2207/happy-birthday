@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPBD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <!-- Heart icon in top corner -->
+    <div class="heart-icon" id="heartIcon">
+        <i class="fas fa-heart"></i>
+    </div>
+    
+    <!-- Thêm container cho hiệu ứng intro sao băng -->
+    <div id="introContainer" class="intro-container"></div>
+    <!-- 3D Heart container (initially hidden) -->
+    <div id="heart3DContainer" class="heart-3d-container" style="display: none;">
+        <div class="close-btn" id="closeHeart">×</div>
+        <div id="heart3D"></div>
+    </div>
+    
+    <!-- Initial gift box view -->
+    <div class="gift-container" id="initial-gift">
+        <img src="qua.png" alt="Hộp Quà Sinh Nhật" class="gift-image animate__animated animate__pulse animate__infinite">
+        <div class="gift-instruction">Click me</div>
+    </div>
+    
+    <!-- Birthday celebration content (initially hidden) -->
+    <div class="container" id="birthday-content" style="display: none;">
+        <div class="birthday-card">
+            <div class="glowing-border"></div>
+            <div class="card-background"></div>
+            
+            <div class="floating-balloons">
+                <div class="balloon" style="--balloon-color: #ff1493; --delay: 0s;"></div>
+                <div class="balloon" style="--balloon-color: #4169e1; --delay: 2s;"></div>
+                <div class="balloon" style="--balloon-color: #ffd700; --delay: 1s;"></div>
+                <div class="balloon" style="--balloon-color: #ff69b4; --delay: 3s;"></div>
+                <div class="balloon" style="--balloon-color: #00bfff; --delay: 4s;"></div>
+            </div>
+            
+            <h1><span class="word-reveal">Chúc</span> <span class="word-reveal">Mừng</span> <span class="word-reveal">Sinh</span> <span class="word-reveal">Nhật</span></h1>
+            <h2 class="birthday-subtitle">Hôm nay là ngày đặc biệt của bạn!</h2>
+            
+            <div class="gift-box">
+                <img src="banh sinh nhat.png" id="celebrateBtn" alt="Bánh Sinh Nhật" class="celebrate-btn animate__animated animate__pulse animate__infinite">
+                <p>click me</p>
+            </div>
+            
+            <div class="confetti-container"></div>
+            
+            <div class="birthday-message">
+                <p class="message-highlight">♥ Gửi đến bạn lời chúc sinh nhật đầy ấm áp và chân thành nhất! ♥</p>
+                <p>Mong rằng tuổi mới sẽ mang đến cho bạn thật nhiều sức khỏe, hạnh phúc và thành công.</p>
+                <p>Hahahahahahaah</p>
+                <p class="message-wish">Ước mong tất cả những điều tốt đẹp nhất sẽ đến với bạn! ✨</p>
+            </div>
+            
+          
+           
+            
+            <div class="birthday-footer">
+                <div class="sparkling-stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p class="footer-text">Mỗi phút giây đều đáng trân trọng</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="heart.js"></script>
+</body>
+</html> 
